@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <set>
+#include <map>
+typedef long long ll;
+typedef long double ld;
+ 
+using namespace std;
+ 
+int main(){
+    ios_base::sync_with_stdio(0); cin.tie(0);
+    ll a;
+    cin>>a;
+    for(ll i{0};i<a;i++){
+        ll num;
+        cin>>num;
+        if(num<7 || num==9){
+            cout<<"NO"<<"\n";
+        }else{
+            if((num)%3==0){
+                cout<<"YES"<<"\n";
+                cout<<1<<" "<<4<<" "<<num-5<<"\n";
+            }else{
+                cout<<"YES"<<"\n";
+                cout<<1<<" "<<2<<" "<<num-3<<"\n";
+            }
+        }
+    }
+    
+return 0;
+}
