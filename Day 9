@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <set>
+#include <map>
+typedef long long ll;
+typedef long double ld;
+ 
+using namespace std;
+ 
+int main(){
+    ios_base::sync_with_stdio(0); cin.tie(0);
+    ll x;
+    cin>>x;
+    for(int i{0};i<x;i++){
+        ll a,b;
+        cin>>a>>b;
+        vector<pair<ll,ll>>arr;
+        for(int i{0};i<a;i++){
+            ll ele;
+            cin>>ele;
+           if(ele%b==0){
+            cout<<i+1<<" ";
+           }else{
+            arr.push_back({ele%b,-1*(i+1)});
+           }
+        }
+        sort(arr.rbegin(),arr.rend());
+        for(auto i:arr){
+            if(i.first!=0){
+                cout<<-1*i.second<<" ";
+            }
+        }
+        
+        cout<<"\n";
+    }
+    
+ 
+    
+return 0;
+}
