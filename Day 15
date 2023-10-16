@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <set>
+#include <map>
+typedef long long ll;
+typedef long double ld;
+ 
+using namespace std;
+ 
+int main(){
+    ios_base::sync_with_stdio(0); cin.tie(0);
+    ll itr;
+    cin>>itr;
+    for(int i{0};i<itr;i++){
+        ll n;
+        cin>>n;
+        ll count{0};
+        ll maxNum=-2e9;
+        for(ll i{0};i<n;i++){
+            ll ele;
+            cin>>ele;
+            ll op = ele & 1;
+            if(op == 0){
+                count++;
+                maxNum = max(count,maxNum);
+            }else{
+                maxNum = max(count,maxNum);
+                count=0;
+            }
+        }
+        cout<<maxNum<<"\n";
+    }
+ 
+return 0;
+}
