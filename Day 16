@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <set>
+#include <map>
+typedef long long ll;
+typedef long double ld;
+ 
+using namespace std;
+ 
+int main(){
+    ll itr;
+    cin>>itr;
+    for(ll j{0};j<itr;j++){
+        ll n;
+        cin>>n;
+        ll minNum= 2e9;
+        ll product=1;
+        vector<ll>arr;
+        for(ll i{0};i<n;i++){
+            ll ele;
+            cin>>ele;
+            arr.push_back(ele);
+            
+        }
+        sort(arr.begin(),arr.end());
+        arr[0]=arr[0]+1;
+        for(auto i : arr){
+            product = product * i;
+        }
+        cout<<product<<"\n";
+    }
+return 0;
+}
