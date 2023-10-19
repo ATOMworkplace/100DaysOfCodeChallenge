@@ -1,0 +1,26 @@
+class Solution {
+
+public:
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    vector <float> result;
+    float median;
+    for (int i : nums1){
+        result.push_back(i);
+    }
+    for (int i : nums2){
+        result.push_back(i);
+    }
+    sort(result.begin(),result.end());
+    int length = result.size();
+    int index = length/2;
+    if ( length % 2 !=0){
+        median = result[index];
+    }else{
+        median = (result[index]+result[index-1])/2;
+    }
+    return median;
+    }
+};
