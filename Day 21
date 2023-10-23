@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+using namespace std;
+long long maxEle(long long a , long long b){
+    if(a>=b){
+        return a;
+    }else{
+        return b;
+    }
+}
+int main(){
+    long long a;
+    cin>>a;
+    long long ele_a=0;
+    for(long long i{0};i<a;i++){
+        long long num;
+        cin>>num;
+        ele_a=max(num,ele_a);
+    }
+    long long b;
+    cin>>b;
+    long long ele_b=0;
+    for(long long i{0};i<b;i++){
+        long long num;
+        cin>>num;
+        ele_b=max(num,ele_b);
+    }
+    cout<<ele_a<<" "<<ele_b<<endl;
+return 0;
+}
